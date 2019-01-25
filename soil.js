@@ -9,8 +9,9 @@ var client = new Things();
 var noClients = 0;
 
 var flag = 0;
-var channelID = 687385;
-var writeKey = 'ZR8A9S3ALIDSIMRN';
+//ThingSpeak Info
+var channelID = 'Your Channel ID';
+var writeKey = 'Your Write Key';
 
 app.use(express.static(__dirname + "/public"));
 
