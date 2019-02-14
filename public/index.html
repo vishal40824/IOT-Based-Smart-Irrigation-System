@@ -5,13 +5,29 @@
     <title>Soil Data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-<h4>Live soil moisture data update</h4>
-<div id="soilInp"></div>
+    <div class="jumbotron text-center">
+        <h4>Live soil moisture data</h4>
+    </div>
+    
+    <div class="container text-center">
+    <div id="soilInp"></div>
+    <div class="row">
+        <div class="col">
+            <iframe width="330" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/687385/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=column&yaxis=Moisture+in+%25"></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <iframe width="330" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/687385/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Light&type=line&xaxis=Time+stamp&yaxis=Intensity+in+%25&yaxismax=100&yaxismin=0"></iframe>
+        </div>
+    </div>
 
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/687385/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=column&yaxis=Moisture+in+%25"></iframe>
+<iframe width="330" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/apps/matlab_visualizations/273144"></iframe>
 
+</div>
 <script src="soilData.js"></script>
 
 </body>
