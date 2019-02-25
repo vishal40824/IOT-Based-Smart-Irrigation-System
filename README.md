@@ -1,4 +1,4 @@
-## How to setup the System using Johnny-Five, Socket.io and ThingSpeak
+## How to setup the system using Johnny-Five, Socket.io and ThingSpeak
 This Repository is about how to set up a Soil Moisture Sensor and push the data to ThingSpeak.
 
 Realtime sensor data will be displayed on the client side using Socket.io 
