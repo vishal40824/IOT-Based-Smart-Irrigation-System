@@ -1,0 +1,22 @@
+<div ng-init="showSingleData()">
+    <form ng-submit="updateData()">
+        <div class="card">
+        <div class="card-header text-dark text-center">Edit the details</div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="plant">Type of Plant</label>
+                    <input type="text" class="form-control" id="plant" name="typeOfPlant" placeholder="Enter Plant Type" ng-model="fieldData.typeOfPlant" value="fieldData.typeOfPlant" required>
+                </div>
+                <div class="form-group">
+                    <label for="soil">Type of Soil</label>
+                    <input type="text" class="form-control" id="soil" name="typeOfSoil" placeholder="Enter Soil Type" ng-model="fieldData.typeOfSoil" value="fieldData.typeOfSoil" required>
+                </div>
+                <div class="form-group">
+                    <label for="ht">Plant Height</label>
+                    <input type="text" class="form-control" id="ht" name="height" placeholder="Enter Height of Plant" ng-model="fieldData.height" value="fieldData.height" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Change</button>
+            </div>
+        </div>
+    </form>
+</div>

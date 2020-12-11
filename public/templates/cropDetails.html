@@ -1,0 +1,57 @@
+<div class="table-responsive">
+<div class="text-center"><h4>Your Current Crop Details</h4></div><br>
+    <div ng-init="getAllData()">
+        <table align="center" class="table table-dark table-bordered table-striped">
+            <thead class="thead-light">
+                <tr align="center">
+                <th>Sl. No.</th>
+                <th>Plant Name</th>
+                <th>Soil Name</th>
+                <th>Plant Height</th>
+                <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="field in fieldData" align="center">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ field.typeOfPlant }}</td>
+            <td>{{ field.typeOfSoil }}</td>
+            <td>{{ field.height }}</td>
+            <td> 
+            <div class="btn-group">
+                <!-- <a ng-click="deleteData(field._id)" class="btn btn-danger"> Delete </a> -->
+                <a href="#/users/{{field._id}}/edit" class="btn btn-info"><span class="fas fa-edit"></span> Update  </a>
+            </div>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr>
+<div class="table-responsive">
+<div class="text-center"><h4>Crop Details History</h4></div><br>
+    <div ng-init="getAllAttribData()">
+        <table align="center" class="table table-dark table-bordered table-striped">
+            <thead class="thead-light">
+                <tr align="center">
+                <th>Sl. No.</th>
+                <th>Plant Name</th>
+                <th>Soil Name</th>
+                <th>Plant Height</th>
+                <th>Date of Modification</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="attr in attribDetails | orderBy:'+':true" align="center">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ attr.typeOfPlant }}</td>
+                <td>{{ attr.typeOfSoil }}</td>
+                <td>{{ attr.height }} ft</td>
+                <td>{{ attr.createdOn | date: "dd-MM-yyyy 'at' h:mma" }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

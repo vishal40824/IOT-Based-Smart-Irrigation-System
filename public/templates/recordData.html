@@ -1,0 +1,54 @@
+<div class="table-responsive">
+    <div class="text-center"><h4>Sensor Data History</h4></div>
+    <br>
+    <div class="row">
+        <div class="col-md-5">
+            <span>Items per page: {{ itemsPerPage }}</span><input type="range" class="form-control-range border" min="6" max="18" ng-model="itemsPerPage" placeholder="Enter items per page"> 
+        </div>
+        <div class="col-md-5">
+        </div>
+    </div>
+    <br>
+    <dir-pagination-controls 
+    max-size="6"
+    direction-links="true" 
+    boundary-links="true"
+    on-page-change="count(newPageNumber, oldPageNumber)">
+    </dir-pagination-controls>
+
+    <span class="badge badge-primary">Current Page: {{first}}</span>
+    <div ng-init="getAllRecordedData()">
+        <table align="center" class="table table-dark table-bordered table-striped">
+            <thead class="thead-light">
+                <tr align="center">
+                    <th>Sl. No.</th>
+                    <th>Soil</th>
+                    <th>Light</th>
+                    <th>Temperature</th>
+                    <th>Wind</th>
+                    <th>Humidity</th>
+                    <th>Recorded Date & Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr dir-paginate="rec in recordData | orderBy:'+':true | itemsPerPage:itemsPerPage" align="center">
+                    <td>{{ itemsPerPage * (first - 1) + $index + 1 }}</td>
+                    <td>{{ rec.soil }} %</td>
+                    <td>{{ rec.light }} %</td>
+                    <td>{{ rec.temp }} ℃</td>
+                    <td>{{ rec.wind }}</td>
+                    <td>{{ rec.humidity }} g/m<sup>3</sup></td>
+                    <td>{{ rec.createdOn | date: "dd-MM-yyyy 'at' h:mma" }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+<br>
+<dir-pagination-controls 
+max-size="6"
+direction-links="true" 
+boundary-links="true"
+on-page-change="count(newPageNumber, oldPageNumber)">
+</dir-pagination-controls>

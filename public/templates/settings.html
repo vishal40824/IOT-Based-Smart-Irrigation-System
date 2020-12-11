@@ -1,0 +1,46 @@
+<div ng-init="getAllUserSetting()">
+    <div class="card-columns">
+        <form ng-submit="updateEmail(user._id)">
+            <div class="card">
+                <div class="card-header bg-light text-center"><b>Update Your Email</b></div>
+                    <div class="alert alert-success alert-dismissible fade show" ng-if="emailMessage" id="match">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{emailMessage}}
+                    </div>
+                <div class="card-body text-right">
+                    <input type="email" class="form-control" name="email" placeholder="Enter new email" value="user.email" ng-model="user.email" required>
+                    <br><button type="submit" class="btn btn-primary">Change</button>
+                </div>
+            </div>
+        </form>
+        <form ng-submit="updatePassword(user._id)">
+            <div class="card">
+                <div class="card-header bg-light text-center"><b>Update Your Password</b></div>
+                    <div ng-switch="passMess">
+                        <div ng-switch-when="Password Updated successfully" id="match">
+                            <div class="alert alert-success alert-dismissible fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>{{passMess}}</div>
+                        </div>
+                        <div ng-switch-when="Passwords do not match" id="match">
+                            <div  class="alert alert-danger alert-dismissible fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>{{passMess}}</div>
+                        </div>
+                    </div>
+                <div class="card-body text-right">
+                    <input type="password" class="form-control" name="pass1" ng-model="user.pass1" placeholder="Enter new password" required>
+                    <br><input type="password" class="form-control" name="pass2" ng-model="user.pass2" placeholder="Confirm new password" required>
+                    <br><button type="submit" class="btn btn-primary">Change</button>
+                </div>
+            </div>
+        </form>
+
+        <form ng-submit="updateCity(user._id)">
+            <div class="card">
+                <div class="card-header bg-light text-center"><b>Update Your City</b></div>
+                <div class="alert alert-success alert-dismissible fade show" id="match" ng-if="cityMessage"><button type="button" class="close" data-dismiss="alert">&times;</button>{{cityMessage}}</div>
+                <div class="card-body text-right">
+                    <input type="text" class="form-control" name="city" placeholder="Enter new city" value="user.city" ng-model="user.city" required>
+                    <br><button type="submit" class="btn btn-primary">Change</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

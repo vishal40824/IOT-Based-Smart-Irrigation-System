@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h2.page-header Console Login
+    form(action="/users/login" method="post")
+        .form-group
+            label UserName
+            input.form-control(type="text", name="username", placeholder="Enter Username")
+        .form-group
+            label Password
+            input.form-control(type="password", name="password", placeholder="Enter Password")
+        .form-group
+            input(type="checkbox", name="rememberMe")
+            span
+                b  Rememeber Me
+        input.btn.btn-success(type="submit", name='submit', value='Login')
+        div
+            br
+            a(href="/users/forgot") Forgot password?

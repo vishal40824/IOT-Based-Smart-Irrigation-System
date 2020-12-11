@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h2.page-header Password Reset
+    form(action="/users/forgot" method="post")
+        .form-group
+            label Enter your UserName
+            input.form-control(type="text", name="username", placeholder="Enter Username", required)
+        input.btn.btn-info(type="submit", name='submit', value='Submit')

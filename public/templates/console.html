@@ -1,0 +1,35 @@
+<div class="card text-center">
+    <div class="card-header bg-info text-light">
+        <h5 class="lang" key="heading2">Manual Pump Control</h5>
+    </div>
+    <div class="card-body bg-light">
+        <p id="currentPumpState" class="border"></p>
+        <input type="button" id="manualBtn" value="Enable" class="btn btn-primary"/>&nbsp;
+        <input type="button" id="pumpBtn"/>
+        <div id="pumpDisp"></div>
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-header bg-info text-light text-center">
+        <h5 class="lang" key="heading3">Live data update</h5>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-sm border">
+                &nbsp;
+                <div id="soilInp"></div>
+                <div id="lightInp"></div>
+                <div id="dayInp"></div>
+            </div>
+            &nbsp;
+            <div class="col-sm border">
+                &nbsp;
+                <div id="weatherDetails"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<script src="/javascripts/soilData.js"></script>

@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    h2.page-header Register
+    p Please register using the form below
+    if errors
+        each error, i in errors
+            div.alert.alert-danger #{error.msg}
+    form(action="/users/register" method="post",enctype='multipart/form-data')
+        .form-group
+            label UserName
+            input.form-control(type="text", name="user", placeholder="Enter Username")
+        .form-group
+            label Email
+            input.form-control(type="email", name="email", placeholder="Enter your Email")
+        .form-group
+            label City
+            input.form-control(type="text", name="city", placeholder="Enter name of your City")
+        .form-group
+            label What plant/crop are you growing currently?
+            input.form-control(type="text", name="plant", placeholder="Enter name of Plant")
+        .form-group
+            label What soil are you using currently?
+            input.form-control(type="text", name="soil", placeholder="Enter name of Soil")
+        .form-group
+            label What is the height of your plant currently? (Note: Enter zero if not yet growing)
+            input.form-control(type="number", name="height", min="0", placeholder="Enter Plant Height in Feet")
+        .form-group
+            label Password
+            input.form-control(type="password", name="password", placeholder="Enter Password")
+        .form-group
+            label Confirm Password
+            input.form-control(type="password", name="password2", placeholder="Confirm Password")
+        //- .form-group
+        //-     label Profile Image
+        //-     input.form-control(type="file", name="profileImage")
+        input.btn.btn-primary(type="submit", name='submit', value='Register')
