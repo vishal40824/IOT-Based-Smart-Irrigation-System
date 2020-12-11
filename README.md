@@ -1,13 +1,29 @@
 # How to setup the project
 
-## Note: Make sure you have made the neccessary connections to the arduino and the sensors before you start with this
+### Note: Make sure you have made the neccessary connections to the arduino and the sensors before you start with this project
 
-This Repository is about how an Irrigation system that automates the entire workflow
+> Circuit Diagram
+
+![Screenshot](connections.png)
+
+This Repository is about an Irrigation system that automates the entire workflow
 
 Realtime sensor data will be displayed on the client side using Socket.io 
 
-All the details on how to setup the sensors is given in the /bin/www file
+All the details on how to setup the sensors is given in the "/bin/www" file
 
+
+>Components needed
+
+| Name | Quantity |	Component |
+| --- | :---: | --- |
+R1 | 1 | Photoresistor
+U1 | 1 | Arduino Uno R3
+R2 | 1 | 150 kΩ Resistor
+Drelay | 1 | Red LED
+RledResistor | 1|100 Ω Resistor
+soil Moisture Sensor|1| sensor
+Submersible Pump|1| Relay SPDT
 
 > commands to run before you start
 
@@ -24,19 +40,3 @@ npm i
 ```
 npm start
 ```
-
->Components needed
-
-| Name | Quantity |	Component |
-| --- | :---: | --- |
-R1 | 1 | Photoresistor
-U1 | 1 | Arduino Uno R3
-R2 | 1 | 150 kΩ Resistor
-Drelay | 1 | Red LED
-RledResistor | 1|100 Ω Resistor
-soil Moisture Sensor|1| sensor
-Submersible Pump|1| Relay SPDT
-
-> Circuit Connections
-
-![Screenshot](connections.png)
