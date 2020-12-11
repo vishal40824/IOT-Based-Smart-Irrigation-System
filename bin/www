@@ -28,14 +28,18 @@ const opts = {
     key: fs.readFileSync(__dirname + '/ssl/server.key'),
     cert: fs.readFileSync(__dirname + '/ssl/server.crt')
   };
+const thinkSpeakCreds = {
+    channelID: "Insert your channelID here",
+    writeKey: "Insert your writeKey here"
+}
 var eventEmitter = new events.EventEmitter();
 var client = new ThingSpeak();
 var noClients = 0;
 var startFlag = true;
 const recordInterval = 1000 * 60 * 10; // Inserting data every 10min
 
-var channelID = 687385;
-var writeKey = 'ZR8A9S3ALIDSIMRN';
+var channelID = thinkSpeakCreds.channelID;
+var writeKey = thinkSpeakCreds.writeKey;
 
 // Recording the data every now and then
 setInterval(function(){
