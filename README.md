@@ -3,7 +3,14 @@ This Repository is about how to set up a Soil Moisture Sensor and push the data 
 
 Realtime sensor data will be displayed on the client side using Socket.io 
 
-All the details on how to setup the sensors is given in the server.js file
+All the details on how to setup the sensors is given in the /bin/www file
+
+### commands to run before you start
+Go to root directory of the project 
+```
+npm i
+```
+
 ### Components needed
 | Name | Quantity |	Component |
 | --- | :---: | --- |
