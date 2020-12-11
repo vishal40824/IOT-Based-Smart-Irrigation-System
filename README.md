@@ -1,18 +1,28 @@
->## How to setup the project using Johnny-Five, Socket.io, ThingSpeak and MongoDB
+# How to setup the project
 
-This Repository is about how to set up an Irrigation system that automates the entire workflow
+## Note: Make sure you have made the neccessary connections to the arduino and the sensors before you start with this
+
+This Repository is about how an Irrigation system that automates the entire workflow
 
 Realtime sensor data will be displayed on the client side using Socket.io 
 
 All the details on how to setup the sensors is given in the /bin/www file
 
+
 > commands to run before you start
 
-* Go to root directory of the project
-* Open the Terminal and type the below commands
+* Go to root directory of the project (i.e., IOT-Based-Smart-Irrigation-System/)
+* Open the Terminal and type the below command(s)
 
 ```
 npm i
+```
+
+* The above command will install certain dependencies, which might take some time depending on your internet
+* To start the server use the following command
+
+```
+npm start
 ```
 
 >Components needed
